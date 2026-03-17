@@ -3,10 +3,14 @@ import { defineConfig, passthroughImageService } from "astro/config";
 import starlight from "@astrojs/starlight";
 import Icons from "unplugin-icons/vite";
 import tailwindcss from "@tailwindcss/vite";
-
+import cloudflare from '@astrojs/cloudflare';
 import vue from "@astrojs/vue";
 
 export default defineConfig({
+   output: "static",
+    adapter:  cloudflare({
+    imageService: 'compile',
+  }),
   image: {
     service: passthroughImageService(),
   },

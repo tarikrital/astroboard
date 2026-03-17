@@ -13,23 +13,26 @@
     "start": "astro dev",
     "build": "astro check & astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "generate-types": "wrangler types"
   },
   "dependencies": {
-    "@astrojs/starlight": "^0.34.3",
-    "@astrojs/starlight-tailwind": "^4.0.1",
-    "@astrojs/vue": "^5.1.0",
+    "@astrojs/cloudflare": "^13.1.2",
+    "@astrojs/starlight": "^0.38.1",
+    "@astrojs/starlight-tailwind": "^5.0.0",
+    "@astrojs/vue": "^6.0.1",
     "@tailwindcss/postcss": "^4.1.7",
     "@tailwindcss/vite": "^4.1.8",
-    "astro": "^5.8.0",
+    "astro": "^6.0.5",
     "tailwindcss": "^4.1.8",
     "unplugin-icons": "^22.1.0",
     "unplugin-vue-components": "^28.7.0",
     "vue": "^3.5.14"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.4",
+    "@astrojs/check": "^0.9.8",
+    "@iconify-json/tabler": "^1.2.18",
     "typescript": "^5.8.3",
-    "@iconify-json/tabler": "^1.2.18"
+    "wrangler": "^4.74.0"
   }
 }
