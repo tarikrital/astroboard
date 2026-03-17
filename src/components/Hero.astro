@@ -62,24 +62,18 @@ const performance: PerformanceItem[] = [
 ---
 
   <div class="grid md:grid-cols-3 gap-x-8 md:mt-14">
-        {
-          performance.map((item: any, i: number) => (
-            <div class="text-center md:mb-0 !mt-0">
-              <div
-                class={`bg-gray-100 relative mx-auto mb-8 flex items-center justify-center rounded-xl p-2 shadow-lg ${
-                  performance.length - 1 !== i
-                    ? "after:absolute after:-right-4 after:-z-[1] after:hidden after:w-full after:translate-x-full after:border-b-2 after:border-dashed after:border-primary/50 after:content-[''] md:after:block"
-                    : undefined
-                }`}
-              >
-                <Image height={170} width={420} src={item.image} alt="" />
-              </div>
-              <h2 class="text-xl font-bold">{item.title}</h2>
-              <p class="mt-4 text-gray-500">{item.description}</p>
-            </div>
-          ))
-        }
+  {
+    performance.map((item: any, i: number) => (
+      <div class="text-center md:mb-0 !mt-0">
+        <div class="bg-gray-100 relative mx-auto mb-8 flex items-center justify-center rounded-xl p-2 shadow-lg">
+          <Image height={170} width={420} src={item.image} alt="" />
+        </div>
+        <h2 class="text-xl font-bold">{item.title}</h2>
+        <p class="mt-4 text-gray-500">{item.description}</p>
       </div>
+    ))
+  }
+</div>
 
   </section>
 
